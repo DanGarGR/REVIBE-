@@ -113,27 +113,90 @@ margin-top:40px;
 
 }
 
-.gallery{
+.productos{
 
-display:flex;
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
 gap:30px;
-justify-content:center;
+
 margin-top:40px;
 
 }
 
-.card{
+.producto{
 
-position:relative;
-width:250px;
-height:300px;
-
-overflow:hidden;
+background:white;
 
 border-radius:10px;
 
+overflow:hidden;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+transition:0.3s;
+
 }
 
+.producto:hover{
+
+transform:translateY(-10px);
+
+}
+
+.producto img{
+
+width:100%;
+height:260px;
+
+object-fit:cover;
+
+}
+
+.producto-info{
+
+padding:20px;
+
+}
+
+.producto-info h3{
+
+font-family:'Montserrat';
+
+margin-bottom:10px;
+
+}
+
+.producto-info p{
+
+margin-bottom:15px;
+
+font-weight:bold;
+
+}
+
+.producto-info button{
+
+background:#4b0f3b;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.producto-info button:hover{
+
+transform:scale(1.1);
+
+}
 .card img{
 
 position:absolute;
@@ -299,5 +362,25 @@ line-height:1.7;
 
 background:#eee;
 padding:80px 40px;
+
+}
+
+@media (max-width:900px){
+
+.productos{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:500px){
+
+.productos{
+
+grid-template-columns:1fr;
+
+}
 
 }
