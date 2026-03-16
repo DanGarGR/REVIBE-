@@ -285,3 +285,19 @@ font-size:32px;
 }
 
 }
+
+.descripcion{
+
+max-width:800px;
+margin:auto;
+margin-top:30px;
+line-height:1.7;
+
+}
+
+#contacto{
+
+background:#eee;
+padding:80px 40px;
+
+}
